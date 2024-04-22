@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What's your favorite color?",
+    "type": "radio",
+    "options": ["Red", "Blue", "Green", "Yellow"],
+    "eligibleFields": ["Blue"]
+  },
+  {
+    "question": "What's your favorite color?",
+    "type": "checkbox",
+    "options": ["Red", "Blue", "Green", "Yellow"],
+    "eligibleFields": ["Blue"]
+  }
+]

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Question from '../Question';
+import Question from './Question';
 
 const RadioQuestionComponent = ({
   index,

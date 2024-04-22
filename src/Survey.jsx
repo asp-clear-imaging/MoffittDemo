@@ -10,18 +10,20 @@ import {
 } from 'react-native';
 import CheckboxQuestionComponent from './components/SurveyComponent/CheckboxQuestionComponent';
 import RadioQuestionComponent from './components/SurveyComponent/RadioQuestionComponent';
-import surveyData from './SurveyQuestionsOnly.json';
 
-console.log(surveyData);
-
-const Survey = () => {
+const Survey = ({navigation, route}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const progressAnimation = new Animated.Value(0);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [isEligible, setIsEligible] = useState(false);
+  const {surveyData} = route.params;
+  console.log(surveyData);
 
   useEffect(() => {
+    navigation.setOptions({
+      title: 'Survey',
+    });
     Animated.timing(progressAnimation, {
       toValue: currentIndex / surveyData.length,
       duration: 300,
@@ -145,7 +147,7 @@ const Survey = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.heading}>Survey Form</Text>
+      {/* <Text style={styles.heading}>Survey Form</Text> */}
       {!showSuccessMessage && (
         <>
           <View style={styles.progressBarContainer}>
@@ -188,16 +190,14 @@ const Survey = () => {
       )}
       {showSuccessMessage && (
         <View style={styles.completionMessage}>
-          <Text>
+          <Text style={{fontSize: 34, fontWeight: '700', marginBottom: 10}}>
             {isEligible ? 'You are eligible' : 'You are not eligible.'}
           </Text>
+           ̰
           <Button
             styles={styles.button2}
             onPress={() => {
-              setShowSuccessMessage(false);
-              setIsEligible(false);
-              setAnswers([]);
-              setCurrentIndex(0);
+              navigation.goBack();
             }}
             title="Home"
           />
@@ -251,8 +251,9 @@ const styles = StyleSheet.create({
     marginRight: '10px',
   },
   completionMessage: {
-    marginTop: 24,
+    flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

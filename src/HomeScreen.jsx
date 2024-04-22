@@ -6,24 +6,22 @@ import radio from './SurveyQuestionsOnly.json';
 import checkBox from './SurveyCheckboxOnly.json';
 import combined from './SurveyCombined.json';
 
-export default function SurveyMain() {
+export default function HomeScreen() {
   const navigation = useNavigation();
 
   useEffect(() => {
     navigation.setOptions({
-      title: 'Survey Type',
+      title: 'Home',
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const getJson = from => {
+  const openScreen = from => {
     console.log(from);
-    if (from === 'Single Select') {
-      return radio;
-    } else if (from === 'Multi Select') {
-      return checkBox;
+    if (from === 'Survey') {
+      navigation.navigate('surveyOptions');
+    } else if (from === 'Notifications') {
     } else {
-      return combined;
     }
   };
 
@@ -36,16 +34,18 @@ export default function SurveyMain() {
   };
   return (
     <View style={styles.container}>
-      {/* <Text style={styles.header}>Survey Type</Text> */}
-      {['Single Select', 'Multi Select', 'Combined'].map((value, index) => (
-        <Type
-          text={value}
-          key={value}
-          onPress={() => {
-            navigation.navigate('survey', {surveyData: getJson(value)});
-          }}
-        />
-      ))}
+      {['Survey', 'Notifications', 'Embedded Components'].map(
+        (value, index) => (
+          <Type
+            text={value}
+            key={value}
+            onPress={() => {
+              // navigation.navigate('survey', {surveyData: getJson(value)});
+              openScreen(value);
+            }}
+          />
+        ),
+      )}
     </View>
   );
 }

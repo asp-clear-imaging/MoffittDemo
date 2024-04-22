@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Question from '../Question';
+import Question from './Question';
 
 const CheckboxQuestionComponent = ({
   index,
@@ -9,9 +9,10 @@ const CheckboxQuestionComponent = ({
   selectedOptions,
   onSelectOption,
 }) => {
+  console.log(index);
   return (
     <View style={styles.container}>
-      <Question index={index} question={questions} key={index} />
+      <Question index={index + 1} question={questions} key={index} />
       {options.map((option, idx) => (
         <TouchableOpacity key={idx} onPress={() => onSelectOption(option)}>
           <View style={styles.optionContainer}>

@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What all you do to keep your self fit and healthy?",
+    "type": "checkbox",
+    "options": ["Yoga", "Gym", "Eat Healthy", "Nothing"],
+    "eligibleFields": [""]
+  },
+  {
+    "question": "How many times in a week do you smoke?",
+    "type": "checkbox",
+    "options": ["1", "2", "5", "10", "None"],
+    "eligibleFields": ["1", "2", "5", "10"]
+  }
+]

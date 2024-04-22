@@ -1,14 +1,14 @@
 [
   {
-    "question": "What's your favorite color?",
+    "question": "Do u smoke?",
     "type": "radio",
-    "options": ["Red", "Blue", "Green", "Yellow"],
-    "eligibleFields": ["Blue"]
+    "options": ["Yes", "No"],
+    "eligibleFields": ["Yes"]
   },
   {
-    "question": "What's your favorite color?",
+    "question": "Do you exercise?",
     "type": "radio",
-    "options": ["Red", "Blue", "Green", "Yellow"],
-    "eligibleFields": ["Blue"]
+    "options": ["Yes", "No"],
+    "eligibleFields": [""]
   }
 ]
