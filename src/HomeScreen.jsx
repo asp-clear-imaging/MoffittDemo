@@ -1,10 +1,8 @@
 /* eslint-disable react/no-unstable-nested-components */
+import notifee from '@notifee/react-native';
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import radio from './SurveyQuestionsOnly.json';
-import checkBox from './SurveyCheckboxOnly.json';
-import combined from './SurveyCombined.json';
+import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -21,6 +19,7 @@ export default function HomeScreen() {
     if (from === 'Survey') {
       navigation.navigate('surveyOptions');
     } else if (from === 'Notifications') {
+      navigation.navigate('notifOptions');
     } else {
     }
   };
@@ -40,7 +39,6 @@ export default function HomeScreen() {
             text={value}
             key={value}
             onPress={() => {
-              // navigation.navigate('survey', {surveyData: getJson(value)});
               openScreen(value);
             }}
           />
@@ -52,7 +50,6 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     padding: 20,
   },
