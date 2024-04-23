@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Do u smoke?",
+    "type": "radio",
+    "options": ["Yes", "No"],
+    "eligibleFields": ["Yes"]
+  },
+  {
+    "question": "Do you exercise?",
+    "type": "radio",
+    "options": ["Yes", "No"],
+    "eligibleFields": [""]
+  }
+]
