@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "clearData": "watchman watch-del-all && rm -rf node_modules && yarn && yarn start --reset-cache"
   },
   "dependencies": {
     "@notifee/react-native": "^7.8.2",

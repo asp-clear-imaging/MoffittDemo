@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import radio from './SurveyQuestionsOnly.json';
 import checkBox from './SurveyCheckboxOnly.json';
 import combined from './SurveyCombined.json';
@@ -37,6 +37,10 @@ export default function SurveyMain() {
   return (
     <View style={styles.container}>
       {/* <Text style={styles.header}>Survey Type</Text> */}
+      <Image
+        source={require('./assets/logo.png')}
+        style={{resizeMode: 'center'}}
+      />
       {['Single Select', 'Multi Select', 'Combined'].map((value, index) => (
         <Type
           text={value}
@@ -55,6 +59,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#062F6E',
   },
   header: {
     fontSize: 24,
@@ -68,10 +73,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: 'black',
+    borderColor: 'white',
     marginBottom: 10,
   },
   typeText: {
     fontSize: 16,
+    color: 'white',
   },
 });

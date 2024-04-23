@@ -2,7 +2,14 @@
 import notifee from '@notifee/react-native';
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
-import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Button,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 export default function NotifOptions() {
   const navigation = useNavigation();
@@ -93,6 +100,10 @@ export default function NotifOptions() {
   return (
     <View style={{flex: 1}}>
       <View style={styles.container}>
+        <Image
+          source={require('./assets/logo.png')}
+          style={{resizeMode: 'center'}}
+        />
         {['Local Notification', 'In App Notifications'].map((value, index) => (
           <Type
             text={value}
@@ -117,6 +128,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#062F6E',
   },
   header: {
     fontSize: 24,
@@ -130,10 +142,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: 'black',
+    borderColor: 'white',
     marginBottom: 10,
   },
   typeText: {
     fontSize: 16,
+    color: 'white',
   },
 });

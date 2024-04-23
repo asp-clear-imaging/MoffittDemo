@@ -193,11 +193,12 @@ const Survey = ({navigation, route}) => {
           <Text style={{fontSize: 34, fontWeight: '700', marginBottom: 10}}>
             {isEligible ? 'You are eligible' : 'You are not eligible.'}
           </Text>
-           ̰
           <Button
             styles={styles.button2}
             onPress={() => {
               navigation.goBack();
+              navigation.goBack();
+              cl;
             }}
             title="Home"
           />

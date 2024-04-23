@@ -2,7 +2,14 @@
 import notifee from '@notifee/react-native';
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect} from 'react';
-import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Button,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -33,6 +40,10 @@ export default function HomeScreen() {
   };
   return (
     <View style={styles.container}>
+      <Image
+        source={require('./assets/logo.png')}
+        style={{resizeMode: 'center'}}
+      />
       {['Survey', 'Notifications', 'Embedded Components'].map(
         (value, index) => (
           <Type
@@ -50,8 +61,10 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#062F6E',
   },
   header: {
     fontSize: 24,
@@ -65,10 +78,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: 'black',
+    borderColor: 'white',
     marginBottom: 10,
   },
   typeText: {
     fontSize: 16,
+    color: 'white',
   },
 });
