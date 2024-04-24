@@ -6,6 +6,7 @@ import HomeScreen from './src/HomeScreen';
 import Survey from './src/Survey';
 import SurveyMain from './src/SurveyMain';
 import NotifOptions from './src/NotifOptions';
+import PlayerComponent from './src/components/Player';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Stack.Screen name="surveyOptions" component={SurveyMain} />
           <Stack.Screen name="survey" component={Survey} />
           <Stack.Screen name="notifOptions" component={NotifOptions} />
+          <Stack.Screen name="ec" component={PlayerComponent} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

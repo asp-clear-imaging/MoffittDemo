@@ -2,7 +2,8 @@
 import notifee from '@notifee/react-native';
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect} from 'react';
-import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Button, StyleSheet, Text, TextComponent, TouchableOpacity, View} from 'react-native';
+import PlayerComponent from './components/Player';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -21,6 +22,7 @@ export default function HomeScreen() {
     } else if (from === 'Notifications') {
       navigation.navigate('notifOptions');
     } else {
+      navigation.navigate('ec');
     }
   };
 
@@ -33,6 +35,7 @@ export default function HomeScreen() {
   };
   return (
     <View style={styles.container}>
+    
       {['Survey', 'Notifications', 'Embedded Components'].map(
         (value, index) => (
           <Type
