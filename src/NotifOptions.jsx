@@ -46,14 +46,9 @@ export default function NotifOptions() {
                 textAlign: 'center',
                 marginBottom: 10,
               }}>
-              Header
+              Session Reminder
             </Text>
-            <Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </Text>
+            <Text>Its time for you to take your second session.</Text>
             <View style={{marginVertical: 10}}>
               <Button
                 title="Close"
@@ -79,8 +74,8 @@ export default function NotifOptions() {
 
     // Display a notification
     await notifee.displayNotification({
-      title: 'Hello',
-      body: 'This will contain notification body',
+      title: 'Session Time',
+      body: 'Its time for you to take your second session.',
       android: {
         channelId,
         pressAction: {

@@ -191,14 +191,15 @@ const Survey = ({navigation, route}) => {
       {showSuccessMessage && (
         <View style={styles.completionMessage}>
           <Text style={{fontSize: 34, fontWeight: '700', marginBottom: 10}}>
-            {isEligible ? 'You are eligible' : 'You are not eligible.'}
+            {isEligible
+              ? 'You are eligible for the survey, someone from our team will contact you shortly.'
+              : 'Thank You for your time'}
           </Text>
           <Button
             styles={styles.button2}
             onPress={() => {
               navigation.goBack();
               navigation.goBack();
-              cl;
             }}
             title="Home"
           />
