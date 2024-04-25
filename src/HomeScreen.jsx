@@ -28,6 +28,7 @@ export default function HomeScreen() {
     } else if (from === 'Notifications') {
       navigation.navigate('notifOptions');
     } else {
+      navigation.navigate('ec');
     }
   };
 
