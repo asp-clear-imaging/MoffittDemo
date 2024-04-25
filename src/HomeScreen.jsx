@@ -45,6 +45,9 @@ export default function HomeScreen() {
         source={require('./assets/logo.png')}
         style={{resizeMode: 'center'}}
       />
+      <Text style={{fontSize: 20, color: 'white', marginBottom: 20}}>
+        Medal Component Library
+      </Text>
       {['Survey', 'Notifications', 'Embedded Components'].map(
         (value, index) => (
           <Type
@@ -56,6 +59,9 @@ export default function HomeScreen() {
           />
         ),
       )}
+      <Text style={{position: 'absolute', bottom: 10, color: 'white'}}>
+        This is a demo
+      </Text>
     </View>
   );
 }
