@@ -6,14 +6,14 @@
     "eligibleFields": [""]
   },
   {
-    "question": "During the past 4 weeks, how often have you had difficulty falling asleep?",
-    "type": "radio",
-    "options": ["Rarely", "Sometimes", "Often", "Almost Always"],
+    "question": "Do you have any hereditary conditions/diseases?",
+    "type": "checkbox",
+    "options": ["High blood pressure", "Diabetes", "Hemophilia", "Thalassemia"],
     "eligibleFields": [""]
   },
   {
     "question": "Which statement best describes your cigarette smoking status?",
-    "type": "checkbox",
+    "type": "radio",
     "options": [
       "I smoke every day",
       "I smoke some days",

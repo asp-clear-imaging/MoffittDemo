@@ -1,31 +1,14 @@
 [
   {
-    "question": "How many servings of fruits and vegetables do you eat per day?",
+    "question": "Which of the following symptoms do you experience (trouble falling asleep)?",
     "type": "checkbox",
-    "options": ["None", "1-2 servings", "3-4 servings", "5 or more servings"],
+    "options": ["Headache", "Back pain", "Body pain"],
     "eligibleFields": [""]
   },
   {
-    "question": "During the past 4 weeks, how often have you had difficulty falling asleep?",
+    "question": "Do you have any hereditary conditions/diseases?",
     "type": "checkbox",
-    "options": ["Rarely", "Sometimes", "Often", "Almost Always"],
-    "eligibleFields": [""]
-  },
-  {
-    "question": "Which statement best describes your cigarette smoking status?",
-    "type": "checkbox",
-    "options": [
-      "I smoke every day",
-      "I smoke some days",
-      "I smoke now but have cut down",
-      "I recently quit smoking* but I have smoked in the past 30 days",
-      "I have never smoked* or have smoked less than 100 cigarettes in my lifetime"
-    ],
-    "eligibleFields": [
-      "I smoke every day",
-      "I smoke some days",
-      "I smoke now but have cut down",
-      "I recently quit smoking* but I have smoked in the past 30 days"
-    ]
+    "options": ["High blood pressure", "Diabetes", "Hemophilia", "Thalassemia"],
+    "eligibleFields": ["Diabetes"]
   }
 ]

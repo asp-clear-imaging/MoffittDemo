@@ -48,7 +48,7 @@ export default function NotifOptions() {
               }}>
               Session Reminder
             </Text>
-            <Text>Its time for you to take your second session.</Text>
+            <Text>It's time for you to begin your second session</Text>
             <View style={{marginVertical: 10}}>
               <Button
                 title="Close"
@@ -75,7 +75,7 @@ export default function NotifOptions() {
     // Display a notification
     await notifee.displayNotification({
       title: 'Session Time',
-      body: 'Its time for you to take your second session.',
+      body: "It's time for you to begin your second session",
       android: {
         channelId,
         pressAction: {

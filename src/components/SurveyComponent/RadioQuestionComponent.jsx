@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 8,
     paddingLeft: 16,
+    flexShrink: 1,
   },
   questionText: {
     fontSize: 18,

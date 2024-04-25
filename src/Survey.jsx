@@ -144,7 +144,8 @@ const Survey = ({navigation, route}) => {
         return null;
     }
   };
-
+  console.log('length', surveyData.length);
+  console.log('current index', currentIndex);
   return (
     <ScrollView style={styles.container}>
       {/* <Text style={styles.heading}>Survey Form</Text> */}
@@ -153,9 +154,9 @@ const Survey = ({navigation, route}) => {
           <View style={styles.progressBarContainer}>
             <View style={styles.progressBarText}>
               <Text>{`Progress ${currentIndex + 1}/${surveyData.length}`}</Text>
-              <Text>{`${((currentIndex / surveyData.length) * 100).toFixed(
+              {/* <Text>{`${((currentIndex / surveyData.length) * 100).toFixed(
                 0,
-              )}%`}</Text>
+              )}%`}</Text> */}
             </View>
             <Animated.View
               style={[
