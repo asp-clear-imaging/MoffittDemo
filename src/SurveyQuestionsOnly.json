@@ -17,14 +17,12 @@
     "options": [
       "I smoke every day",
       "I smoke some days",
-      "I smoke now but have cut down",
       "I recently quit smoking* but I have smoked in the past 30 days",
       "I have never smoked* or have smoked less than 100 cigarettes in my lifetime"
     ],
     "eligibleFields": [
       "I smoke every day",
       "I smoke some days",
-      "I smoke now but have cut down",
       "I recently quit smoking* but I have smoked in the past 30 days"
     ]
   }

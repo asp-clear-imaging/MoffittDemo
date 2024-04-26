@@ -1,8 +1,8 @@
 [
   {
-    "question": "Whats your gender?",
+    "question": "During the past 4 weeks, how often have you had difficulty falling asleep?",
     "type": "radio",
-    "options": ["Male", "Female"],
+    "options": ["Once", "2-3 times", "4-5 times", "More than a week"],
     "eligibleFields": [""]
   },
   {

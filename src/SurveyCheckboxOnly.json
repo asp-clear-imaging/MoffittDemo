@@ -1,8 +1,8 @@
 [
   {
-    "question": "Which of the following symptoms do you experience (trouble falling asleep)?",
+    "question": "Which of the following symptoms do you experience?",
     "type": "checkbox",
-    "options": ["Headache", "Back pain", "Body pain"],
+    "options": ["Headache", "Back pain", "Body pain", "Trouble falling asleep"],
     "eligibleFields": [""]
   },
   {

@@ -48,17 +48,15 @@ export default function HomeScreen() {
       <Text style={{fontSize: 20, color: 'white', marginBottom: 20}}>
         Medal Component Library
       </Text>
-      {['Survey', 'Notifications', 'Embedded Components'].map(
-        (value, index) => (
-          <Type
-            text={value}
-            key={value}
-            onPress={() => {
-              openScreen(value);
-            }}
-          />
-        ),
-      )}
+      {['Survey', 'Notifications', 'Embedded Content'].map((value, index) => (
+        <Type
+          text={value}
+          key={value}
+          onPress={() => {
+            openScreen(value);
+          }}
+        />
+      ))}
       <Text style={{position: 'absolute', bottom: 10, color: 'white'}}>
         This is a demo
       </Text>
